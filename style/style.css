@@ -1,0 +1,130 @@
+.container-fluid{
+    width: 50rem;
+}
+#chat > .messages{
+    overflow-y: scroll;
+    height: 20rem;
+    overflow-x:visible;
+    width: inherit;
+}
+#form{
+
+}
+.messages{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    scroll-behavior: smooth;
+}
+#chat{
+    padding: 1.5rem;
+    margin: 0.5rem;
+    display: none;
+    border: black 1px solid;
+    border-radius: 4px;
+    flex-flow: column;
+}
+.messages > .received {
+    font-size: small;
+    position: sticky;
+    right: 100%;
+    width: 34vw;
+    overflow-wrap: break-word;
+    background-color: dodgerblue;
+    color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 0.6rem;
+}
+
+
+.messages > .sent {
+    font-size: small;
+    position: sticky;
+    overflow-wrap: break-word;
+    left: 100%;
+    color: #FFFFFF;
+    width: 34vw;
+    background-color: #009688;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 0.6rem;
+}
+@media (max-width: 576px) {
+    .messages > .received {
+        font-size: small;
+        position: sticky;
+        right: 100%;
+        width: fit-content;
+        overflow-wrap: break-word;
+        background-color: dodgerblue;
+        color: #FFFFFF;
+        border-radius: 1rem;
+        padding: 0.6rem;
+        margin: 0.6rem;
+    }
+    .messages > .sent {
+        font-size: small;
+        position: sticky;
+        overflow-wrap: break-word;
+        left: 100%;
+        color: #FFFFFF;
+        width: fit-content;
+        background-color: #009688;
+        border-radius: 1rem;
+        padding: 0.6rem;
+        margin: 0.6rem;
+    }
+}
+.arrow{
+    box-sizing: border-box;
+    height: 1.6vw;
+    width: 1.6vw;
+    border-style: solid;
+    border-color: white;
+    border-width: 0px 4px 4px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+}
+
+#float{
+
+    position: absolute;
+    z-index: 9999;
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem;
+    display: none;
+    flex-flow: row-reverse;
+    bottom: 0rem;
+    right: inherit;
+    padding: 1rem;
+}
+#text{
+    resize: none;
+    padding: 1rem;
+    font: 14px/22px "Lato", Arial, sans-serif;
+    background-color: #eeecec;
+    border-radius: 0.2rem;
+    box-shadow: 1px 1px 1px #999;
+    border: 0;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
